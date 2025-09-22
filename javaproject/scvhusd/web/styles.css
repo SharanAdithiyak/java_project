@@ -1,0 +1,40 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; color: #222; background: #f7f7fb; }
+header { background: #232946; color: #fff; padding: 16px 24px; display: flex; align-items: center; justify-content: space-between; }
+header h1 { margin: 0; font-size: 20px; }
+nav .tab { background: transparent; color: #fff; border: 1px solid #fff3; padding: 8px 12px; margin-left: 8px; border-radius: 6px; cursor: pointer; }
+nav .tab.active { background: #eebbc3; color: #232946; border-color: #eebbc3; }
+
+main { max-width: 980px; margin: 24px auto; padding: 0 16px; }
+.view.hidden { display: none; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+.card { background: #fff; border-radius: 10px; padding: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); display: flex; flex-direction: column; gap: 8px; }
+.card .title { font-weight: 600; }
+.card .desc { color: #555; font-size: 14px; }
+.card .price { margin-top: auto; font-weight: 600; }
+.card .add { margin-top: 8px; background: #3da9fc; color: #fff; border: none; padding: 10px 12px; border-radius: 8px; cursor: pointer; }
+
+#cart-items .cart-row { display: grid; grid-template-columns: 1fr auto auto auto auto; gap: 8px; align-items: center; background: #fff; padding: 10px; margin-bottom: 8px; border-radius: 8px; }
+#cart-items .c-qty { display: inline-flex; align-items: center; gap: 6px; }
+#cart-items .c-qty input { width: 56px; }
+#cart-items .remove { background: transparent; border: none; font-size: 18px; cursor: pointer; color: #a33; }
+
+#totals { margin-top: 12px; background: #fff; border-radius: 8px; padding: 12px; }
+#totals > div { display: flex; justify-content: space-between; padding: 4px 0; }
+#totals .total { font-weight: 700; border-top: 1px dashed #ddd; margin-top: 6px; padding-top: 6px; }
+
+.payment { margin-top: 16px; background: #fff; border-radius: 8px; padding: 12px; }
+.pay-tabs { display: flex; gap: 8px; margin-bottom: 8px; }
+.ptab { border: 1px solid #ddd; background: #f0f0f0; border-radius: 8px; padding: 8px 12px; cursor: pointer; }
+.ptab.active { background: #3da9fc; color: #fff; border-color: #3da9fc; }
+.primary { background: #3da9fc; color: #fff; border: none; padding: 10px 14px; border-radius: 8px; cursor: pointer; margin-top: 8px; }
+.message { margin-top: 10px; }
+.message.ok { color: #0a7; }
+.message.err { color: #a00; }
+
+.tx { background: #fff; border-radius: 8px; padding: 12px; margin-bottom: 8px; }
+.t-head { display: grid; grid-template-columns: 80px 1fr 120px 140px; gap: 8px; font-weight: 600; }
+.t-items { margin-top: 6px; display: grid; gap: 4px; }
+.t-item { display: grid; grid-template-columns: 1fr 60px 100px 120px; gap: 8px; font-size: 14px; color: #333; }
+
+footer { text-align: center; color: #666; margin: 24px 0 40px; }

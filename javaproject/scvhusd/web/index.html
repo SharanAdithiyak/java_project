@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>E-Commerce Demo</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Store</h1>
+    <nav>
+      <button id="tab-shop" class="tab active">Shop</button>
+      <button id="tab-cart" class="tab">Cart: <span id="cart-count" class="badge">0</span></button>
+      <button id="tab-transactions" class="tab">Transactions</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="shop" class="view">
+      <h2>Products</h2>
+      <div class="toolbar">
+        <input id="search" type="search" placeholder="Search products..." />
+      </div>
+      <div id="products" class="grid"></div>
+    </section>
+
+    <section id="cart" class="view hidden">
+      <h2>Your Cart</h2>
+      <div class="toolbar">
+        <button id="clear-cart" class="secondary">Clear Cart</button>
+      </div>
+      <div id="cart-items"></div>
+      <div id="totals">
+        <div><span>Subtotal</span><span id="subtotal">$0.00</span></div>
+        <div><span>Tax (8.5%)</span><span id="tax">$0.00</span></div>
+        <div class="total"><span>Total</span><span id="total">$0.00</span></div>
+      </div>
+
+      <div class="payment">
+        <h3>Checkout</h3>
+        <div class="pay-tabs">
+          <button id="pay-cash" class="ptab active">Cash</button>
+          <button id="pay-card" class="ptab">Card</button>
+        </div>
+        <div id="cash-form" class="pay-form">
+          <label>Amount Paid $ <input type="number" id="cash-amount" step="0.01" min="0" /></label>
+        </div>
+        <div id="card-form" class="pay-form hidden">
+          <label>Card Last 4 <input type="text" id="card-last4" maxlength="4" /></label>
+          <label>Name on Card <input type="text" id="card-name" /></label>
+          <label>Expiry (MM/YY) <input type="text" id="card-exp" placeholder="MM/YY" /></label>
+        </div>
+        <button id="checkout" class="primary">Complete Purchase</button>
+        <div id="message" class="message"></div>
+      </div>
+    </section>
+
+    <section id="transactions" class="view hidden">
+      <h2>Transactions</h2>
+      <div id="tx-list"></div>
+    </section>
+  </main>
+
+  <footer>
+    <small>E-commerce </small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
